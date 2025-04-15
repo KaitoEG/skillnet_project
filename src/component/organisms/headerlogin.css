@@ -1,0 +1,11 @@
+.headerlogin{
+    display: flex;
+    width: 1920px;
+    height: 85px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    background: #FFF;
+    box-shadow: 4px 0px 20px 0px #000;
+}

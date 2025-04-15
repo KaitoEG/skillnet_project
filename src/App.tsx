@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import './App.css';
+import Logo1 from './component/imagenes/logo1.png';
 
-function App() {
-  const [count, setCount] = useState(0)
+const Login: React.FC = () => {
+    return (
+        <div className='contiene'>
+          <div className="login-container">
+          <img src={Logo1} alt="Una imagen de ejemplo" />
+          </div>
+          <div className="login-form">
+            <div className='cubiculo'>
+                <h1>INICIAR SESION</h1>
+                <button className="google-button">Iniciar con Google</button>
+                <button className="apple-button">Iniciar con Apple</button>
+                <p>O</p>
+                <input type="text" placeholder="Correo electrónico o teléfono" />
+                <input type="password" placeholder="Contraseña" />
+                <p className="forgot-password">Olvidó su contraseña?</p>
+                <label>
+                    <input type="checkbox" /> Mantenerme conectado
+                </label>
+                <button className="submit-button">Iniciar sesión</button>
+            </div>
+            </div>
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+            <footer className="footer">
+              
+              <div className='arriba'>
+                <div><p>Acerca de</p></div>
+                <div><p>Política de privacidad</p></div>
+                <div><p>Condiciones de uso</p></div>
+                <div><p>Accesibilidad</p></div>
+                
+              </div>
+              <div className='abajo'>
+                <p>Nuestras redes sociales</p>
+                <p>+591 777798626</p>
+                <p>cybertigres@skillnet.com</p>
+                <p>© SkillNet project 2025</p>
+              </div>  
+              
+                
+            </footer>
+        </div>
+    );
+};
 
-export default App
+export default Login;
